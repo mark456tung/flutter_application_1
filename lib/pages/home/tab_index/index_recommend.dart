@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice/pages/home/tab_index/index_recommend_item_widget.dart';
 
 import 'index_recommend_data.dart';
 
@@ -35,13 +36,8 @@ class IndexRecommend extends StatelessWidget {
           Wrap(
             spacing: 10.0,
             runSpacing: 10.0,
-            children: dataList
-                .map((item) => Container(
-                      decoration: BoxDecoration(color: Colors.red),
-                      width: (MediaQuery.of(context).size.width - 10.0 * 3) / 2,
-                      height: 100.0,
-                    ))
-                .toList(),
+            children:
+                dataList.map((item) => IndexRecommendItemWidget(item)).toList(),
           )
         ],
       ),
