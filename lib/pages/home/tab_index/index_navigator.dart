@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import './index_navigator_tiem.dart';
+import 'package:practice/widgets/common_image.dart';
+import 'index_navigator_item.dart';
 
 class IndexNavigator extends StatelessWidget {
   const IndexNavigator({Key key}) : super(key: key);
@@ -17,7 +18,7 @@ class IndexNavigator extends StatelessWidget {
                   },
                   child: Column(
                     children: <Widget>[
-                      Image.asset(
+                      CommonImage(
                         item.imageUri,
                         width: 47.5,
                       ),

@@ -1,5 +1,5 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_advanced_networkimage/provider.dart';
 
 final networkUriReg = RegExp('^http');
 final loaclUriReg = RegExp('^static');
@@ -20,12 +20,7 @@ class CommonImage extends StatelessWidget {
         width: width,
         height: height,
         fit: fit,
-        image: AdvancedNetworkImage(
-          src,
-          useDiskCache: true,
-          cacheRule: CacheRule(maxAge: Duration(days: 7)),
-          timeoutDuration: Duration(seconds: 20),
-        ),
+        image: CachedNetworkImageProvider(src),
       );
     }
     if (loaclUriReg.hasMatch(src)) {

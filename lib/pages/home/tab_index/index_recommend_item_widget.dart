@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice/widgets/common_image.dart';
 
 import 'index_recommend_data.dart';
 
@@ -36,7 +37,7 @@ class IndexRecommendItemWidget extends StatelessWidget {
                   ),
                 ],
               ),
-              Image.asset(
+              CommonImage(
                 data.imageUri,
                 width: 55.0,
               ),

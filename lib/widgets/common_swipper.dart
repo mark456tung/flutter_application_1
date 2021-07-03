@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:practice/widgets/common_image.dart';
 
 const List<String> defaultImages = [
   'https://ww3.sinaimg.cn/large/006y8mN6ly1g6e2tdgve1j30ku0bsn75.jpg',
@@ -23,7 +24,7 @@ class CommonSwiper extends StatelessWidget {
         child: Swiper(
           autoplay: true,
           itemBuilder: (BuildContext context, int index) {
-            return new Image.network(
+            return CommonImage(
               images[index],
               fit: BoxFit.fill,
             );
